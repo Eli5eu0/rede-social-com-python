@@ -38,7 +38,7 @@ src/
 1. **Clonar o repositório**
 
 ```bash
-git clone https://github.com/SEU_USUARIO/rede-social-com-python.git
+git clone https://github.com/Eli5eu0/rede-social-com-python.git
 cd rede-social-com-python
 ```
 
@@ -78,4 +78,5 @@ Ou:
 * Criar, listar e gerenciar posts
 * Autenticação e autorização
 * Estrutura modular para fácil manutenção
+
 
