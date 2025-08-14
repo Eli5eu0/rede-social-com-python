@@ -1,0 +1,1 @@
+poetry run fastapi dev srs//api//application.py
