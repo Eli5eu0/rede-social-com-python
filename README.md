@@ -1,28 +1,45 @@
-# Rede Social com Python
+# 📱 Rede Social com Python
 
-Uma API de rede social desenvolvida em **Python** seguindo princípios de **arquitetura limpa** e **camadas bem definidas**.
+Uma aplicação de rede social desenvolvida em Python, estruturada com módulos para API, serviços, camadas de dados, autenticação e configuração.
 
 ## 📂 Estrutura do Projeto
 
 ```
 src/
 │
-├── api/                 # Camada de API (endpoints)
-│   ├── dtos/             # Objetos de transferência de dados (Data Transfer Objects)
-│   ├── exceptions/       # Exceções customizadas
-│   └── routes/           # Rotas HTTP (FastAPI)
+├── api/
+│   ├── dtos/
+│   │   ├── posts.py
+│   │   └── users.py
+│   ├── exceptions/
+│   │   └── user.py
+│   └── routes/
+│       ├── home.py
+│       ├── post.py
+│       ├── users.py
+│       ├── application.py
+│       ├── authentication.py
+│       └── configuration.py
 │
-├── datalayer/            # Acesso a dados e modelos
-│   └── models/           # Definições de entidades
+├── datalayer/
+│   ├── models/
+│   │   ├── base.py
+│   │   ├── post.py
+│   │   └── user.py
 │
-├── services/             # Regras de negócio (services)
+├── services/
+│   ├── post.py
+│   └── user.py
 │
-├── utils/                # Funções utilitárias
+├── utils/
 │
-├── db.sqlite3            # Base de dados SQLite
-├── requirements.txt      # Dependências do projeto
-├── pyproject.toml        # Configuração do Poetry
-└── dev.sh                # Script de desenvolvimento
+├── db.sqlite3
+├── dev.py
+├── dev.sh
+├── pyproject.toml
+├── poetry.lock
+├── requirements.txt
+└── TODO.md
 ```
 
 ## 🚀 Tecnologias Utilizadas
@@ -35,7 +52,7 @@ src/
 
 ## ⚙️ Instalação e Execução
 
-1. **Clonar o repositório**
+1️. **Clonar o repositório**
 
 ```bash
 git clone https://github.com/Eli5eu0/rede-social-com-python.git
@@ -66,8 +83,21 @@ Ou:
 ```bash
 ./dev.sh
 ```
+## 💻 Executar o projeto
 
-4. **Acessar a API**
+### Ambiente de desenvolvimento
+
+```bash
+task dev
+```
+
+### Ambiente de produção
+
+```bash
+task prod
+```
+
+### Acessar a API
 
 * Documentação Swagger: `http://127.0.0.1:8000/docs`
 * Documentação ReDoc: `http://127.0.0.1:8000/redoc`
@@ -79,4 +109,6 @@ Ou:
 * Autenticação e autorização
 * Estrutura modular para fácil manutenção
 
+## 📜 Licença
 
+Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e distribuir.
