@@ -60,7 +60,8 @@ cd rede-social-com-python
 ```
 
 2. **Criar ambiente virtual e instalar dependências**
-   Se estiver usando Poetry:
+
+Se estiver usando Poetry:
 
 ```bash
 poetry install

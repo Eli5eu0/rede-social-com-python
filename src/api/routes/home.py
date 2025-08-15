@@ -1,8 +1,5 @@
-from fastapi import APIRouter, Depends
-from src.datalayer.models.user import UserModel
-from src.api.authentication import verify_token
-from typing import Annotated
-
+from fastapi import APIRouter,Request
+from src.api.authentication import login_required
 
 router = APIRouter(
     prefix="/me",
@@ -11,7 +8,7 @@ router = APIRouter(
 )
 
 
-@router.post("/")
-async def informations(current_user: Annotated[UserModel, Depends(verify_token)]):
-    # Obter informações do usuário logado ou redireccionar parao login
-    return [{"user": current_user}]
+@router.get("/")
+@login_required
+async def informations(request: Request):
+    return {"user": request.current_user}

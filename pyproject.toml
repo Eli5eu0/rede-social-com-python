@@ -22,10 +22,13 @@ packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.13,<4.0"
+taskipy = "^1.12.0"
 
 [tool.poetry.group.dev.dependencies]
 taskipy = "^1.14.1"
 
 [tool.taskipy.tasks]
 dev = "fastapi dev dev.py"
-prod = "uvicorn src.api.application:app --host 0.0.0.0 --port 8000 --reload"
+prod = "uvicorn src.api.application:app --host 0.0.0.0 --port 80 --reload"
+
+
